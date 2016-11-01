@@ -1,0 +1,14 @@
+{
+  "data": [
+    {"id": 1, "name": "Orgn A", "rank": 1, "value": 3.01},
+    {"id": 2, "name": "Orgn B", "rank": 2, "value": 7.13},
+    {"id": 3, "name": "Orgn C", "rank": 3, "value": 5.44},
+    {"id": 4, "name": "Orgn D", "rank": 4, "value": -9.61},
+    {"id": 5, "name": "Orgn E", "rank": 5, "value": 23.41}
+  ],
+  "title": [
+    {"id": 1, "code": "id", "title": "ID", "type": 1},
+    {"id": 2, "code": "name", "title": "Name", "type": 0},
+    {"id": 3, "code": "value", "title": "Value", "type": 1}
+  ]
+}

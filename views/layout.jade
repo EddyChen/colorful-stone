@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Colorful Stone
+    link(rel='stylesheet', href='/material-design-lite/theme/material-red.min.css')
+    link(rel='stylesheet', href='/angular-material/angular-material.min.css')
+    link(rel='stylesheet', href='/fonts/webfont/onlinewebfonts.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    block css-import
+
+    script(type='text/javascript', src='/angular/angular.min.js', charset='utf-8')
+  body(ng-app='colorfulStone', ng-cloak, ng-controller='ColorfulStoneController')
+    block content
+    script(type='text/javascript', src='/material-design-lite/material.min.js', charset='utf-8')
+    script(type='text/javascript', src='/angular-animate/angular-animate.min.js', charset='utf-8')
+    script(type='text/javascript', src='/angular-aria/angular-aria.min.js', charset='utf-8')
+    script(type='text/javascript', src='/angular-messages/angular-messages.min.js', charset='utf-8')
+    script(type='text/javascript', src='/angular-material/angular-material.min.js', charset='utf-8')
+    block js-import

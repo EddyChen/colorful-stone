@@ -1,0 +1,15 @@
+<div class="component-data-table">
+  <h5>排行榜数据标题</h5>
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th ng-repeat="title in tableData.title" ng-class="{'mdl-data-table__cell--non-numeric': title.type === 0}">{{ title.title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="row in tableData.data">
+        <td ng-repeat="title in tableData.title" ng-class="{'mdl-data-table__cell--non-numeric': title.type === 0}">{{ row[title.code] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

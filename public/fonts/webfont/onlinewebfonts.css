@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+@font-face {
+	font-family: "onlinewebfonts";
+	src:url("onlinewebfonts.eot");
+	src:url("onlinewebfonts.eot?#iefix") format("embedded-opentype"),
+		url("onlinewebfonts.woff2") format("woff2"),
+		url("onlinewebfonts.woff") format("woff"),
+		url("onlinewebfonts.ttf") format("truetype"),
+		url("onlinewebfonts.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="i_"]:before, [class*=" i_"]:before{
+	font-family: "onlinewebfonts";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.i_icbc:before {
+	content: "\e010";
+}
+

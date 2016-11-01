@@ -1,0 +1,54 @@
+extends layout
+
+block css-import
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+block content
+  div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    header.mdl-layout__header
+      div.mdl-layout__header-row
+        span.mdl-layout-title 
+          i.i_icbc.header-logo
+          span &nbsp;Colorful Stone
+        div.mdl-layout-spacer
+        nav.mdl-navigation
+          div.mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right.mdl-navigation__link
+            label.mdl-button.mdl-js-button.mdl-button--icon(for='search-node')
+              i.material-icons(role='presentation') search
+            div.mdl-textfield__expandable-holder
+              input.mdl-textfield__input(type='text', name='search-node', id='search-node')
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='#/settings')
+            i.material-icons(role='presentation') settings
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='#/profile')
+            i.material-icons.mdl-badge.mdl-badge--overlap(role='presentation', data-badge="1") person
+    div.mdl-layout__drawer-button(role='button', aria-expanded='false', ng-click='collapseAside()')
+      i.material-icons 
+    main.mdl-layout__content.mdl-layout--fixed-drawer(ng-class='{"aside-collapse": collapse}')
+      aside.mdl-layout__drawer.aside-fixed
+        nav.mdl-navigation.aside-collapse
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='#/home')
+            i.material-icons(role='presentation') home
+            //span &nbsp;Home
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='#/features')
+            i.material-icons(role='presentation') inbox
+            //span &nbsp;Features
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='#/about')
+            i.material-icons(role='presentation') help_outline
+            //span &nbsp;About us
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='/')
+            i.material-icons(role='presentation') shopping_cart
+            //span &nbsp;Log Out
+          a.mdl-navigation__link.mdl-navigation__link--icon(href='javascript:;')
+            i.material-icons(role='presentation') 
+      main.mdl-layout__content.mdl-grid
+        div.mdl-cell.mdl-cell--9-col-desktop.mdl-cell--6-col.mdl-cell--4-col-phone
+          icbc-nav-project(data-url='/json/project-nav.json')
+        div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--2-col.mdl-cell--hide-phone
+          icbc-data-table(data-url='/json/rank-table.json')
+          icbc-data-table(data-url='/json/rank-table.json')
+          icbc-data-table(data-url='/json/rank-table.json')
+
+block js-import
+  script(type='text/javascript', src='/javascripts/index.js', charset='utf-8')
+
+div(ng-include='/templates/template.html')

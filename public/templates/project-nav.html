@@ -1,0 +1,18 @@
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <h5>导航组件标题</h5>
+  <div class="mdl-tabs__tab-bar">
+      <a ng-repeat="(tabKey, tab) in tabData.data" href="#tab-{{ tabKey }}" class="mdl-tabs__tab" ng-class='{"is-active" : $first }'>Tab-{{ tabKey }}</a>
+  </div>
+
+  <div ng-repeat="(tabKey, tab) in tabData.data" id="tab-{{ tabKey }}" class="mdl-tabs__panel" ng-class='{"is-active" : $first }'>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col" ng-repeat="(groupKey, group) in tab">
+        <ul>
+          <span class="title">Group-{{ groupKey }}</span>
+          <li ng-repeat="node in group">{{ node.nodeId }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

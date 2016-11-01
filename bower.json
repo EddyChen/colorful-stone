@@ -1,0 +1,28 @@
+{
+  "name": "colorful-stone",
+  "description": "colorful portal platform",
+  "main": "app.js",
+  "authors": [
+    "chenruifeng <chenrf.dev@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "portal",
+    "web",
+    "components"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-material": "latest",
+    "material-design-lite": "latest"
+  },
+  "homepage": "https://github.com/EddyChen/colorful-stone",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
