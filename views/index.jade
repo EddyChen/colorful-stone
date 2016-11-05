@@ -41,9 +41,11 @@ block content
           a.mdl-navigation__link.mdl-navigation__link--icon(href='javascript:;')
             i.material-icons(role='presentation') 
       main.mdl-layout__content.mdl-grid
-        div.mdl-cell.mdl-cell--9-col-desktop.mdl-cell--6-col.mdl-cell--4-col-phone
+        div.mdl-cell.mdl-cell--9-col-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
           icbc-nav-project(data-url='/json/project-nav.json')
-        div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--2-col.mdl-cell--hide-phone
+          icbc-nav-project(data-url='/json/project-nav.json')
+        div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--hide-tablet.mdl-cell--hide-phone
+          icbc-data-table(data-url='/json/rank-table.json')
           icbc-data-table(data-url='/json/rank-table.json')
           icbc-data-table(data-url='/json/rank-table.json')
           icbc-data-table(data-url='/json/rank-table.json')

@@ -1,4 +1,4 @@
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" ng-cloak>
   <h5>导航组件标题</h5>
   <div class="mdl-tabs__tab-bar">
       <a ng-repeat="(tabKey, tab) in tabData.data" href="#tab-{{ tabKey }}" class="mdl-tabs__tab" ng-class='{"is-active" : $first }'>Tab-{{ tabKey }}</a>
@@ -6,13 +6,21 @@
 
   <div ng-repeat="(tabKey, tab) in tabData.data" id="tab-{{ tabKey }}" class="mdl-tabs__panel" ng-class='{"is-active" : $first }'>
     <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--4-col" ng-repeat="(groupKey, group) in tab">
-        <ul>
-          <span class="title">Group-{{ groupKey }}</span>
-          <li ng-repeat="node in group">{{ node.nodeId }}</li>
+      <div ng-repeat="(groupKey, group) in tab" class="mdl-cell mdl-cell--4-col">
+        <ul class="mdl-list">
+          <h4>Group - {{ groupKey }}</h4>
+          <li ng-repeat="node in group" class="mdl-list__item mdl-list__item--two-line" icbc-after-repeat>
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons mdl-list__item-avatar">insert_chart</i>
+              <span>{{ node.nodeId }} -- {{ node.nodeName }}</span>
+              <span class="mdl-list__item-sub-title">node comments</span>
+            </span>
+            <span class="mdl-list__item-secondary-content">
+              <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+            </span>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-
