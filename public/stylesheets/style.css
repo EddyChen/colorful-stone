@@ -5,6 +5,14 @@
   display: none !important;
 }
 
+.icbc-bg-red {
+  background-color: #c7000a !important;
+}
+
+.icbc-bg-gray {
+  background-color: #ddd !important;
+}
+
 .aside-fixed {
   position: fixed;
   padding-top: 60px;
@@ -12,7 +20,51 @@
 
 .header-logo {
   font-size: 30px;
+  padding-left: 10px;
   padding-right: 10px;
+}
+
+main > aside > nav {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mdl-navigation__link span {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  background-color: #c7000a !important;
+  color: #fff !important;
+}
+
+.project-nav-title {
+  padding-left: 40px;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+.project-nav-title h5{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.project-nav-title > i{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.project-nav-title .project-nav-more {
+  float: right;
+  white-space: nowrap;
+  margin-top: -20px;
+}
+
+.project-nav-title .project-nav-more a {
+  margin-left: 10px;
+  color: #3f51b5;
+  text-decoration: none;
 }
 
 @media(min-width: 1025px) {
@@ -24,6 +76,10 @@
   .aside-collapse main.mdl-layout__content {
     margin-left: 50px !important;
   }
+
+  .mdl-layout--fixed-drawer > footer.mdl-mega-footer {
+    margin-left: 50px !important;
+  }
 }
 
 .aside-collapse.mdl-navigation .mdl-navigation__link {
@@ -31,17 +87,25 @@
 }
 
 @media(max-width: 479px) {
+  .mdl-layout-title span:first-child {
+    display: none;
+  }
+
+  .mdl-layout-title .header-logo {
+    padding-left: 0 !important;
+  }
+
   nav.mdl-navigation div.mdl-navigation__link {
     display: none;
   }
 
   .aside-collapse aside.mdl-layout__drawer {
     /** transform: translateX(50px); */
-    width: 0px !important;
+    width: 0 !important;
   }
 
   .aside-collapse main.mdl-layout__content {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -50,6 +114,56 @@
   padding-right: 10px;
 }
 
+.component-data-table h5 {
+  margin-top: 20px;
+  margin-bottom: 5;
+}
+
 .component-data-table table {
   width: 100%;
+}
+
+.component-data-table table > thead th{
+  color: #fff !important;
+}
+
+.component-data-table thead th:first-child {
+  width: 50px;
+}
+
+.mdl-list__item .list-icon.mdl-list__item-avatar {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 24px !important;
+}
+
+.mdl-list h5 {
+  margin-top: 0 !important;
+  text-align: center;
+}
+
+.mdl-list .mdl-list__item {
+  padding: 5px !important;
+  height: auto !important;
+}
+
+.mdl-tabs__panel .mdl-grid {
+  padding: 0 20px 0 20px;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after,
+.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
+  background-color: #c7000a !important;
+}
+
+.mdl-list__item a i {
+  color: #3f51b5 !important;
+}
+
+.mdl-list__item .mdl-list__item-secondary-content {
+  margin-left: 8px !important;
+}
+
+.mdl-badge[data-badge]:after {
+  background: #3f51b5 !important;
 }

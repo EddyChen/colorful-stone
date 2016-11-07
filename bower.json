@@ -14,7 +14,8 @@
   "dependencies": {
     "angular": "latest",
     "angular-material": "latest",
-    "material-design-lite": "latest"
+    "material-design-lite": "latest",
+    "material-design-icons": "latest"
   },
   "homepage": "https://github.com/EddyChen/colorful-stone",
   "private": true,

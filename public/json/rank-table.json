@@ -10,5 +10,6 @@
     {"id": 1, "code": "id", "title": "ID", "type": 1},
     {"id": 2, "code": "name", "title": "Name", "type": 0},
     {"id": 3, "code": "value", "title": "Value", "type": 1}
-  ]
+  ],
+  "rank": "value"
 }

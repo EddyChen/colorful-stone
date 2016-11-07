@@ -1,13 +1,13 @@
 <div class="component-data-table" ng-cloak>
   <h5>排行榜数据标题</h5>
   <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-    <thead>
+    <thead class="icbc-bg-red">
       <tr>
         <th ng-repeat="title in tableData.title" ng-class="{'mdl-data-table__cell--non-numeric': title.type === 0}">{{ title.title }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="row in tableData.data">
+      <tr ng-repeat="row in tableData.data | orderBy: tableData.rank" ng-class-even="'icbc-bg-gray'">
         <td ng-repeat="title in tableData.title" ng-class="{'mdl-data-table__cell--non-numeric': title.type === 0}">{{ row[title.code] }}</td>
       </tr>
     </tbody>

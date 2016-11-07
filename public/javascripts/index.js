@@ -23,7 +23,7 @@ app.directive("icbcAfterRepeat", ['$timeout', '$log', function($timeout, $log) {
   };
 }]);
 
-app.directive("icbcNavProject", ['$http', function($http) {
+app.directive("icbcNavProject", ['$http', '$window', function($http, $window) {
   function nodeFilter(navData) {
     if (navData.nodeList.length <= 0) return {};
     var tabData = {}, dictData = {}, nodes = navData.nodeList, node,
@@ -59,6 +59,9 @@ app.directive("icbcNavProject", ['$http', function($http) {
         url: $attrs.url
       };
       $scope.$on('renderTabs', function($event) {
+        componentHandler.upgradeElements($elements);
+      });
+      angular.element($window).bind('resize', function() {
         componentHandler.upgradeElements($elements);
       });
       $http(nodeReq).then(function(res) {
