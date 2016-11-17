@@ -1,0 +1,21 @@
+<div class="component-notice-list">
+  <ul class="google-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="javascript:;" class="tab-title" role="tab" data-toggle="tab">
+        <i class="material-icons tab-title-icon">info_outline</i>
+        系统公告
+      </a>
+    </li>
+  </ul>
+  <div class="google-tabs-content tab-content">
+    <div role="tabpanel" class="tab-pane">
+      <ul ng-repeat="notice in noticeData.data" class="mdl-list">
+        <li class="mdl-list__item">
+          <i class="material-icons notice-icon">info</i>
+          <a href="{{notice.link}}" class="mdl-navigation__link notice-title">{{notice.title}}<span class="new-badge" ng-show="notice.isNew">New</span></a>
+          <span class="notice-date">{{notice.date | date:'MM/dd'}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

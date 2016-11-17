@@ -5,6 +5,15 @@
   display: none !important;
 }
 
+.new-badge {
+  padding: 2px 3px;
+  border-radius: 2px;
+  background: #c7000a;
+  color: #fff;
+  font-size: 10px !important;
+  font-weight: 500;
+}
+
 .icbc-bg-red {
   background-color: #c7000a !important;
 }
@@ -24,6 +33,15 @@
   padding-right: 10px;
 }
 
+.header-icbc {
+  font-size: 26px;
+}
+
+.header-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+
 main > aside > nav {
   white-space: nowrap;
   overflow: hidden;
@@ -39,15 +57,42 @@ main > aside > nav {
   color: #fff !important;
 }
 
+.component-project-nav {
+  margin-bottom: 20px;
+}
+
+.component-project-nav .mdl-tabs__tab-bar .mdl-tabs__tab {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.google-tabs .tab-title-icon {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+}
+
+.mdl-tabs__panel .mdl-grid {
+  padding: 0 20px 0 20px;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after,
+.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
+  background-color: #c7000a !important;
+}
+
 .project-nav-title {
   padding-left: 40px;
-  padding-right: 20px;
+  padding-right: 20px !important;
   white-space: nowrap;
 }
 
 .project-nav-title h5{
   margin-top: 10px;
   margin-bottom: 0;
+  font-size: 23px;
 }
 
 .project-nav-title > i{
@@ -58,13 +103,33 @@ main > aside > nav {
 .project-nav-title .project-nav-more {
   float: right;
   white-space: nowrap;
-  margin-top: -20px;
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 .project-nav-title .project-nav-more a {
   margin-left: 10px;
-  color: #3f51b5;
+  color: #333;
   text-decoration: none;
+}
+
+.component-project-nav .mdl-grid .mdl-cell .mdl-list {
+  margin: 0;
+}
+
+.component-project-nav .nav-group-icon {
+  position: relative;
+  float: left;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px;
+  color: #fff;
+  background-color: #c7000a;
+  border-radius: 17px;
+}
+
+.component-project-nav .mdl-list .mdl-list__item {
+  margin-left: 20px;
 }
 
 @media(min-width: 1025px) {
@@ -109,9 +174,47 @@ main > aside > nav {
   }
 }
 
-.component-data-table {
+.component-data-table, .component-notice-list {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.component-notice-list .notice-title {
+  margin-left: 5px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.component-notice-list li {
+  padding-right: 0.3em;
+  text-decoration: none;
+}
+
+.component-notice-list li.mdl-list__item .notice-icon {
+  font-size: 16px;
+  color: #c7000a;
+}
+
+.component-notice-list .notice-date {
+  float: right;
+  color: #999;
+  font-size: 12px;
+}
+
+.component-notice-list .mdl-list{
+  margin: 0;
+  padding: 0;
+}
+
+.component-notice-list .tab-title i {
+  font-size: 18px;
+}
+
+.component-notice-list .mdl-list .mdl-list__item {
+  padding-left: 10px;
+  min-height: 30px;
 }
 
 .component-data-table h5 {
@@ -135,25 +238,28 @@ main > aside > nav {
   width: 24px !important;
   height: 24px !important;
   font-size: 24px !important;
+  background-color: #c7000a !important;
 }
 
-.mdl-list h5 {
+li.mdl-list__item:hover {
+  background-color: #eee;
+}
+
+li.mdl-list__item .project-name:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.mdl-list h6 {
   margin-top: 0 !important;
-  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 40px;
 }
 
 .mdl-list .mdl-list__item {
-  padding: 5px !important;
+  padding: 5px 5px 5px 5px;
   height: auto !important;
-}
-
-.mdl-tabs__panel .mdl-grid {
-  padding: 0 20px 0 20px;
-}
-
-.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after,
-.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
-  background-color: #c7000a !important;
 }
 
 .mdl-list__item a i {

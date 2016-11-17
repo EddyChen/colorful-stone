@@ -1,32 +1,35 @@
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" ng-cloak>
-  <div class="project-nav-title">
-    <h5>导航组件标题<i class="material-icons">developer_board</i></h5>
-    <div class="project-nav-more">
-      <a href="javascript:;">按主题</a>
-      <a href="javascript:;">按专业</a>
-      <a href="javascript:;">更多&nbsp;&gt;&gt;</a>
+<div class="component-project-nav mdl-tabs mdl-js-tabs mdl-js-ripple-effect" ng-cloak>
+  <div class="project-nav-title google-tabs">
+    <div class="active">
+      <h5 class="tab-title"><i class="material-icons tab-title-icon">developer_board</i>{{ tabData.title }}</h5>
+      <div class="project-nav-more">
+        <a href="javascript:;">按主题</a>
+        <a href="javascript:;">按专业</a>
+        <a href="javascript:;">后评估&nbsp;&gt;&gt;</a>
+      </div>
     </div>
   </div>
-  <div class="mdl-tabs__tab-bar">
-      <a ng-repeat="(tabKey, tab) in tabData.data" href="#tab-{{ tabKey }}" class="mdl-tabs__tab" ng-class='{"is-active" : $first }'>Tab-{{ tabKey }}</a>
-  </div>
-
-  <div ng-repeat="(tabKey, tab) in tabData.data" id="tab-{{ tabKey }}" class="mdl-tabs__panel" ng-class='{"is-active" : $first }'>
-    <div class="mdl-grid">
-      <div ng-repeat="(groupKey, group) in tab" class="mdl-cell mdl-cell--4-col">
-        <ul class="mdl-list">
-          <h5>Group - {{ groupKey }}</h5>
-          <li ng-repeat="node in group" class="mdl-list__item mdl-list__item--two-line" icbc-after-repeat>
-            <span class="mdl-list__item-primary-content">
-              <i class="material-icons mdl-list__item-avatar list-icon">insert_chart</i>
-              <span>{{ node.nodeId }} -- {{ node.nodeName }}</span>
-              <span class="mdl-list__item-sub-title">node comments</span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-              <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-            </span>
-          </li>
-        </ul>
+  <div class="google-tabs-content">
+    <div class="mdl-tabs__tab-bar">
+        <a ng-repeat="(tabKey, tab) in tabData.data" href="#tab-{{ tabKey }}" class="mdl-tabs__tab" ng-class='{"is-active" : $first }'>{{ tabKey }}</a>
+    </div>
+    <div ng-repeat="(tabKey, tab) in tabData.data" id="tab-{{ tabKey }}" class="mdl-tabs__panel" ng-class='{"is-active" : $first }'>
+      <div class="mdl-grid">
+        <div ng-repeat="(groupKey, group) in tab" class="mdl-cell mdl-cell--4-col">
+          <ul class="mdl-list">
+            <i class="material-icons nav-group-icon">insert_chart</i>
+            <h6 class="">{{ groupKey }}</h6>
+            <li ng-repeat="node in group" class="mdl-list__item mdl-list__item--two-line" icbc-after-repeat>
+              <span class="mdl-list__item-primary-content">
+                <span class="project-name">{{ node.nodeName }}</span>
+                <span class="mdl-list__item-sub-title"></span>
+              </span>
+              <span class="mdl-list__item-secondary-content">
+                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

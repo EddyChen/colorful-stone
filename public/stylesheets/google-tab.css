@@ -1,0 +1,66 @@
+
+.google-tabs {
+  list-style: outside none none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.google-tabs li {
+  float: left;
+  margin: 0 -15px 0 0;
+}
+
+.google-tabs .tab-title {
+  border-bottom: 30px solid #C3201B;
+  border-right: 30px solid transparent;
+  color: #fff;
+  float: left;
+  height: 0px;
+  line-height: 30px;
+  padding: 0 10px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border-radius: 5px 5px 0 0;
+  opacity: 0.3;
+  filter: alpha(opacity=30); PADDING-BOTTOM: 0px;
+}
+
+.google-tabs .tab-title:hover,
+.google-tabs .tab-title:focus {
+  border-bottom-color: #C3201B;
+  opacity: 1;
+  filter: none !important;
+}
+
+.google-tabs .tab-title:focus {
+  outline: 0 none
+}
+
+.google-tabs .active .tab-title {
+  border-bottom-color: #C3201B;
+  z-index: 3;
+  opacity: 1;
+  filter: none !important;
+}
+
+.google-tabs-content {
+  background: none repeat scroll 0 0 #fff;
+  /*
+  border-left: 1px solid #E1E1E1;
+  border-right: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
+  */
+  border-top: 2px solid #C3201B;
+  padding: 0.2em;
+  box-shadow: 5px 5px 5px #888;
+}
+
+.google-tabs-content h2,
+.google-tabs-content h3,
+.google-tabs-content p {
+  margin: 0 0 15px;
+}

@@ -27,7 +27,7 @@ app.directive("icbcNavProject", ['$http', '$window', function($http, $window) {
   function nodeFilter(navData) {
     if (navData.nodeList.length <= 0) return {};
     var tabData = {}, dictData = {}, nodes = navData.nodeList, node,
-        tabTitle = navData['tabTitle'], subTitle = navData['subTitle'];
+        tabTitle = navData['tabTitle'], subTitle = navData['subTitle'], title = nodes[0][navData['navTitle']];
     for(var i=0; i<nodes.length; ++i) {
       node = nodes[i];
       if (! tabData[node[tabTitle]]) {
@@ -42,6 +42,7 @@ app.directive("icbcNavProject", ['$http', '$window', function($http, $window) {
       }
     }
     return {
+      title: title,
       data: tabData,
       dict: dictData
     };
@@ -85,6 +86,24 @@ app.directive('icbcDataTable', ['$http', function($http) {
       };
       $http(tableReq).then(function(res) {
         $scope.tableData = res.data;
+      });
+    }
+  };
+}]);
+
+app.directive('icbcNoticeList', ['$http', function($http) {
+  return {
+    restrict: 'E',
+    replace: true,
+    scope: {},
+    templateUrl: '/templates/notice-list.html',
+    link: function($scope, $elements, $attrs) {
+      var noticeReq = {
+        method: 'GET',
+        url: $attrs.url
+      };
+      $http(noticeReq).then(function(res) {
+        $scope.noticeData = res.data;
       });
     }
   };

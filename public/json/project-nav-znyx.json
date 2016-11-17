@@ -1,0 +1,31 @@
+{
+  "nodeLength": 10,
+  "nodeList": [
+    {"nodeId": 1,  "nodeName": "网点到店熟客", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "1", "nodeDepartment": "网点到店客户", "isHot": false, "isNew": false},
+    {"nodeId": 2,  "nodeName": "金融资产100万以上生客", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "1", "nodeDepartment": "网点到店客户", "isHot": false, "isNew": false},
+    {"nodeId": 3,  "nodeName": "金融资产20 ~ 100万以上生客", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "1", "nodeDepartment": "网点到店客户", "isHot": false, "isNew": false},
+    {"nodeId": 4,  "nodeName": "储蓄资金全流向监测", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "1", "nodeDepartment": "储蓄资金流向", "isHot": false, "isNew": false},
+    {"nodeId": 5,  "nodeName": "储蓄存款资金流向统计表(按机构、按对手)", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "2", "nodeDepartment": "储蓄资金流向", "isHot": false, "isNew": false},
+    {"nodeId": 6,  "nodeName": "储蓄存款资金流向统计表(按对手)", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "2", "nodeDepartment": "储蓄资金流向", "isHot": false, "isNew": false},
+    {"nodeId": 7,  "nodeName": "他行理财POS大额划款客户", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "2", "nodeDepartment": "储蓄存款", "isHot": false, "isNew": false},
+    {"nodeId": 8,  "nodeName": "迪士尼客户综合营销", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "2", "nodeDepartment": "产品营销", "isHot": false, "isNew": false},
+    {"nodeId": 9,  "nodeName": "畅通卡综合营销", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "3", "nodeDepartment": "产品营销", "isHot": false, "isNew": false},
+    {"nodeId": 10, "nodeName": "二手房贷款直通车", "nodeType": "个人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "3", "nodeDepartment": "个人住房贷款", "isHot": false, "isNew": false},
+    {"nodeId": 11, "nodeName": "工商注册企业全产品精准营销 - 法人代表拓户", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "3", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 12, "nodeName": "工商注册企业全产品精准营销 - 法人代表提质", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "4", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 13, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "4", "nodeDepartment": "6", "isHot": false, "isNew": false},
+    {"nodeId": 14, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "5", "nodeDepartment": "6", "isHot": false, "isNew": false},
+    {"nodeId": 15, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "5", "nodeDepartment": "7", "isHot": false, "isNew": false},
+    {"nodeId": 16, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "5", "nodeDepartment": "7", "isHot": false, "isNew": false},
+    {"nodeId": 17, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "6", "nodeDepartment": "8", "isHot": false, "isNew": false},
+    {"nodeId": 18, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "6", "nodeDepartment": "8", "isHot": false, "isNew": false},
+    {"nodeId": 19, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "6", "nodeDepartment": "8", "isHot": false, "isNew": false},
+    {"nodeId": 20, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "7", "nodeDepartment": "9", "isHot": false, "isNew": false},
+    {"nodeId": 21, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "7", "nodeDepartment": "9", "isHot": false, "isNew": false},
+    {"nodeId": 22, "nodeName": "NODE-NAME", "nodeType": "法人客户模型", "nodeTitle": "智能营销模型", "nodeDomain": "8", "nodeDepartment": "6", "isHot": false, "isNew": false}
+  ],
+  "navTitle": "nodeTitle",
+  "tabTitle": "nodeType",
+  "subTitle": "nodeDepartment",
+  "maxNode": 3
+}

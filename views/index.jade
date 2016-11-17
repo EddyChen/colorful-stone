@@ -2,15 +2,16 @@ extends layout
 
 block css-import
   link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/google-tab.css')
 
 block content
   div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
     header.mdl-layout__header.icbc-bg-red
       div.mdl-layout__header-row
         span.mdl-layout-title
-          span ICBC
+          span.header-icbc ICBC
           i.i_icbc.header-logo
-          span Colorful Stone
+          span.header-title 中国工商银行
         div.mdl-layout-spacer
         nav.mdl-navigation
           div.mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right.mdl-navigation__link
@@ -63,9 +64,10 @@ block content
             span &nbsp;Log Out
       main.mdl-layout__content.mdl-grid
         div.mdl-cell.mdl-cell--9-col-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
-          icbc-nav-project(data-url='/json/project-nav.json')
-          icbc-nav-project(data-url='/json/project-nav.json')
+          icbc-nav-project(data-url='/json/project-nav-jzyx.json')
+          icbc-nav-project(data-url='/json/project-nav-znyx.json')
         div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--hide-tablet.mdl-cell--hide-phone
+          icbc-notice-list(data-url='/json/notice-list.json')
           icbc-data-table(data-url='/json/rank-table.json')
           icbc-data-table(data-url='/json/rank-table.json')
           icbc-data-table(data-url='/json/rank-table.json')
