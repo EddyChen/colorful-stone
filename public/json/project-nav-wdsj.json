@@ -1,0 +1,14 @@
+{
+  "nodeLength": 10,
+  "nodeList": [
+    {"nodeId": 1,  "nodeName": "支行区域同业竞争力", "nodeType": "个人与法人数据统计", "nodeTitle": "网点数据统计", "nodeDomain": "1", "nodeDepartment": "同业对标", "isHot": false, "isNew": false},
+    {"nodeId": 2,  "nodeName": "网点街道同业竞争力", "nodeType": "个人与法人数据统计", "nodeTitle": "网点数据统计", "nodeDomain": "1", "nodeDepartment": "同业对标", "isHot": false, "isNew": false},
+    {"nodeId": 3,  "nodeName": "个人客户排行榜", "nodeType": "个人与法人数据统计", "nodeTitle": "网点数据统计", "nodeDomain": "1", "nodeDepartment": "客户拓展", "isHot": false, "isNew": false},
+    {"nodeId": 4,  "nodeName": "法人客户排行榜", "nodeType": "个人与法人数据统计", "nodeTitle": "网点数据统计", "nodeDomain": "1", "nodeDepartment": "客户拓展", "isHot": false, "isNew": false},
+    {"nodeId": 5,  "nodeName": "网点储蓄存款还原", "nodeType": "个人与法人数据统计", "nodeTitle": "网点数据统计", "nodeDomain": "2", "nodeDepartment": "业务发展", "isHot": false, "isNew": false}
+  ],
+  "navTitle": "nodeTitle",
+  "tabTitle": "nodeType",
+  "subTitle": "nodeDepartment",
+  "maxNode": 3
+}

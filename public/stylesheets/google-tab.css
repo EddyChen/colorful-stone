@@ -37,7 +37,7 @@
 }
 
 .google-tabs .tab-title:focus {
-  outline: 0 none
+  outline: 0 none;
 }
 
 .google-tabs .active .tab-title {

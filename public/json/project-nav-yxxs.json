@@ -1,0 +1,15 @@
+{
+  "nodeLength": 10,
+  "nodeList": [
+    {"nodeId": 1,  "nodeName": "工商注册企业全产品精准营销 - 法人代表拓户", "nodeType": "个人与法人营销线索信息", "nodeTitle": "营销线索信息", "nodeDomain": "1", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 2,  "nodeName": "工商注册企业全产品精准营销 - 法人代表提质(公非私是)", "nodeType": "个人与法人营销线索信息", "nodeTitle": "营销线索信息", "nodeDomain": "1", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 3,  "nodeName": "工商注册企业全产品精准营销 - 法人代表提质(公是私是)", "nodeType": "个人与法人营销线索信息", "nodeTitle": "营销线索信息", "nodeDomain": "1", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 4,  "nodeName": "工商注册企业全产品精准营销 - 代发工资拓户(公是私非)", "nodeType": "个人与法人营销线索信息", "nodeTitle": "营销线索信息", "nodeDomain": "1", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 5,  "nodeName": "工商注册企业全产品精准营销 - 代发工资拓户(公非私是)", "nodeType": "个人与法人营销线索信息", "nodeTitle": "营销线索信息", "nodeDomain": "2", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false},
+    {"nodeId": 6,  "nodeName": "工商注册企业全产品精准营销 - 法人客户拓户", "nodeType": "个人与法人营销线索信息", "nodeTitle": "营销线索信息", "nodeDomain": "2", "nodeDepartment": "客户拓户", "isHot": false, "isNew": false}
+  ],
+  "navTitle": "nodeTitle",
+  "tabTitle": "nodeType",
+  "subTitle": "nodeDepartment",
+  "maxNode": 3
+}

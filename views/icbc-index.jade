@@ -1,12 +1,12 @@
 extends layout
 
 block css-import
-  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/icbc-style.css')
   link(rel='stylesheet', href='/stylesheets/google-tab.css')
 
 block content
   div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-    include header.jade
+    include icbc-header.jade
     //div.mdl-layout__drawer-button(role='button', aria-expanded='false', ng-click='collapseAside()')
       i.material-icons 
     main.mdl-layout__content.mdl-layout--fixed-drawer(ng-class='{"aside-collapse": collapse}')

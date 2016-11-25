@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+/* GET home page. */
+router.get('/icbc', function(req, res, next) {
+  res.render('icbc-index', { title: 'Express' });
+});
+
 module.exports = router;

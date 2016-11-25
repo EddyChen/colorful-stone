@@ -1,4 +1,5 @@
 (function() {
+'use restrict';
 
 var app = angular.module('colorfulStone', ['ngMaterial']);
 
