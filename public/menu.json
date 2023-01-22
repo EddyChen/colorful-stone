@@ -1,0 +1,79 @@
+[
+  {
+    "key": "1",
+    "type": "item",
+    "name": "Intro",
+    "desc": "Intro",
+    "icon": "BankOutlined",
+    "url": ""
+  },
+  {
+    "key": "2",
+    "type": "item",
+    "name": "About",
+    "desc": "About",
+    "icon": "BookOutlined",
+    "url": ""
+  },
+  {
+    "key": "3",
+    "type": "subitem",
+    "name": "Kubernetes",
+    "desc": "K8S",
+    "icon": "CloudOutlined",
+    "sub": [
+      {
+        "key": "3-1",
+        "type": "item",
+        "name": "Kubeadm",
+        "desc": "Kubeadm",
+        "url": ""
+      },
+      {
+        "key": "3-2",
+        "type": "item",
+        "name": "Ingress",
+        "desc": "Ingress",
+        "url": ""
+      },
+      {
+        "key": "3-3",
+        "type": "item",
+        "name": "OpenEbs",
+        "desc": "OpenEbs",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "key": "4",
+    "type": "subitem",
+    "name": "Database",
+    "desc": "DB",
+    "icon": "DatabaseOutlined",
+    "sub": [
+      {
+        "key": "4-1",
+        "type": "item",
+        "name": "Clickhouse",
+        "desc": "Clickhouse",
+        "url": ""
+      },
+      {
+        "key": "4-2",
+        "type": "item",
+        "name": "Postgresql",
+        "desc": "Postgresql",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "key": "5",
+    "type": "item",
+    "name": "Other",
+    "desc": "Other",
+    "icon": "CoffeeOutlined",
+    "url": ""
+  }
+]
