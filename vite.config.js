@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [vue({
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => ['zero-md'].includes(tag),
+        isCustomElement: (tag) => ['zero-md'].includes(tag)
       }
     }
-  })],
+  })]
 })

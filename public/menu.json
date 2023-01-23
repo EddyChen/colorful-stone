@@ -19,7 +19,7 @@
     "key": "3",
     "type": "subitem",
     "name": "Kubernetes",
-    "desc": "K8S",
+    "desc": "Kubernetes",
     "icon": "CloudOutlined",
     "sub": [
       {
@@ -28,7 +28,7 @@
         "name": "Kubeadm",
         "desc": "Kubeadm",
         "icon": "",
-        "url": "/docs/install-k8s-with-kubeadm/README.md"
+        "url": "https://docs-bucket.4everland.store/install-k8s-with-kubeadm/README.md"
       },
       {
         "key": "3-2",
@@ -36,7 +36,7 @@
         "name": "Ingress",
         "desc": "Ingress",
         "icon": "",
-        "url": "/docs/install-ingress-controller/README.md"
+        "url": "https://docs-bucket.4everland.store/install-k8s-with-kubeadm/README.md"
       },
       {
         "key": "3-3",
@@ -52,7 +52,7 @@
     "key": "4",
     "type": "subitem",
     "name": "Database",
-    "desc": "DB",
+    "desc": "Database",
     "icon": "DatabaseOutlined",
     "sub": [
       {
@@ -68,14 +68,21 @@
         "name": "Postgresql",
         "desc": "Postgresql",
         "url": ""
+      },
+      {
+        "key": "4-3",
+        "type": "item",
+        "name": "Elasticsearch",
+        "desc": "Elasticsearch",
+        "url": ""
       }
     ]
   },
   {
     "key": "5",
     "type": "item",
-    "name": "Other",
-    "desc": "Other",
+    "name": "Blogs",
+    "desc": "Blogs",
     "icon": "CoffeeOutlined",
     "url": ""
   }
