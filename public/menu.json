@@ -27,20 +27,23 @@
         "type": "item",
         "name": "Kubeadm",
         "desc": "Kubeadm",
-        "url": ""
+        "icon": "",
+        "url": "/docs/install-k8s-with-kubeadm/README.md"
       },
       {
         "key": "3-2",
         "type": "item",
         "name": "Ingress",
         "desc": "Ingress",
-        "url": ""
+        "icon": "",
+        "url": "/docs/install-ingress-controller/README.md"
       },
       {
         "key": "3-3",
         "type": "item",
         "name": "OpenEbs",
         "desc": "OpenEbs",
+        "icon": "",
         "url": ""
       }
     ]

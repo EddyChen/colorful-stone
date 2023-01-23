@@ -7,7 +7,8 @@
       <div class="logo" />
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
         <template v-for="menu in menuData">
-          <a-menu-item v-if="menu.type === 'item'" v-bind:key="menu.key">
+          <a-menu-item v-if="menu.type === 'item'" v-bind:key="menu.key" 
+            @click="menuClicked(menu, menu.key)">
             <component :is="$icons[menu.icon]" />
             <span>{{ menu.desc }}</span>
           </a-menu-item>
@@ -18,10 +19,13 @@
                 <span>{{ menu.desc }}</span>
               </span>
             </template>
-            <a-menu-item v-for="sub in menu.sub" v-bind:key="sub.key">{{ sub.desc }}</a-menu-item>
+            <a-menu-item v-for="sub in menu.sub" v-bind:key="sub.key"
+              @click="menuClicked(sub, sub.key)">
+              <component :is="$icons[sub.icon]" />
+              {{ sub.desc }}
+            </a-menu-item>
           </a-sub-menu>
         </template>
-        
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -35,8 +39,8 @@
           <a-breadcrumb-item>User</a-breadcrumb-item>
           <a-breadcrumb-item>Bill</a-breadcrumb-item>
         </a-breadcrumb>
-        <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
-          Bill is a cat.
+        <div :style="{ padding: '24px', background: '#fff', minHeight: '700px' }">
+          <zero-md :src="contentUrl"></zero-md>
         </div>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
@@ -48,6 +52,7 @@
 <script>
 import { defineComponent, ref } from 'vue'
 import axios from 'axios'
+import { ZeroMd } from 'zero-md'
 
 export default defineComponent({
   components: {
@@ -56,15 +61,25 @@ export default defineComponent({
     return {
       collapsed: false,
       selectedKeys: ['1'],
-      menuData: []
+      menuData: [],
+      contentUrl: '',
+      content: ''
     };
   },
   mounted() {
     var self = this;
     axios.get('/menu.json').then(res => {
       self.menuData = res.data
-      console.log(self.menuData)
     })
+
+  },
+  methods: {
+    menuClicked(item, key, selectedKeys) {
+      if (!item.url) {
+        return
+      }
+      this.contentUrl = item.url
+    }
   }
 });
 </script>
@@ -78,6 +93,7 @@ export default defineComponent({
 .site-layout .site-layout-background {
   background: #fff;
 }
+
 [data-theme='dark'] .site-layout .site-layout-background {
   background: #141414;
 }

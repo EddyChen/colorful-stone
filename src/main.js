@@ -8,6 +8,9 @@ import 'ant-design-vue/dist/antd.css'
 // import router from './router'
 // import store from './store'
 
+import { marked } from 'marked'
+import hljs from 'highlight.js'
+
 const app = createApp(App)
 
 Object.keys(icons).forEach(key => {
