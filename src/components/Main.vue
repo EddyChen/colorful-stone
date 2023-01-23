@@ -45,7 +45,7 @@ import CrfIcon from './CrfIcon.vue'
         </div>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
-        Blog @ Chen Ruifeng - 2023
+        Blog @ Eddy Chen in 2023 - now
       </a-layout-footer>
     </a-layout>
   </a-layout>
