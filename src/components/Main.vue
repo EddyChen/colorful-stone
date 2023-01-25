@@ -3,7 +3,8 @@ import CrfIcon from './CrfIcon.vue'
 </script>
 <template>
   <a-layout style="min-height: 100vh">
-    <a-layout-sider v-model:collapsed="collapsed" collapsible>
+    <a-layout-sider v-model:collapsed="collapsed" collapsible
+      :style="{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0, top: 0, bottom: 0 }">
       <crf-icon class="logo" />
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
         <template v-for="menu in menuData">
@@ -26,7 +27,7 @@ import CrfIcon from './CrfIcon.vue'
         </template>
       </a-menu>
     </a-layout-sider>
-    <a-layout>
+    <a-layout :style="{ marginLeft: '200px' }">
       <a-layout-header style="background: #fff; padding: 0; text-align: center">
         <a-space align="center">
           <a-typography-title :level="3">
