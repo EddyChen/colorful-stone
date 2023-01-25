@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "./runtimeConfig": "./runtimeConfig.browser",
+      buffer: "node_modules/buffer/index.js" // add buffer
     },
   },
   plugins: [vue({
