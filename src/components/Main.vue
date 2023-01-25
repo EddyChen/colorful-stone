@@ -73,33 +73,38 @@ export default defineComponent({
       self.getBreadCrumbs(self.menuData[0])
       return self.menuData
     }).then(menus => {
-      var menu = {}, sub = []
+      var menu = {}
       for (var i=0; i<menus.length; ++i) {
         menu = menus[i]
         if (menu.type === 'subitem' && menu.bucket) {
-          self.$s3.listObjectsV2({ Bucket: menu.bucket}, (err, data) => {
-            if (!err) {
-              var name = ''
-              data.Contents.forEach((o, idx) => {
-                if (o.Size === 0 && o.Key.endsWith('/')) {
-                  name = o.Key.substr(0, o.Key.length-1)
-                  sub.push({
-                    key: menu.key + '-' + idx,
-                    type: 'item',
-                    name: name,
-                    desc: name,
-                    url: 'https://' + menu.bucket + '.4everland.store/' + o.Key + 'README.md'
-                  })
-                }
-              })
-              menu.sub = sub
-            }
-          })
+          self.initMenuBucket(i)
         }
       }
     })
   },
   methods: {
+    initMenuBucket(idx) {
+      var self = this
+      var menu = this.menuData[idx]
+      menu.sub = []
+      self.$s3.listObjectsV2({ Bucket: menu.bucket}, (err, data) => {
+        if (!err) {
+          data.Contents.forEach((o, idx) => {
+            if (o.Size !== 0 && o.Key.endsWith('README.md')) {
+              var slashIdx = o.Key.indexOf('/')
+              var name = o.Key.substr(0, slashIdx)
+              menu.sub.push({
+                key: menu.key + '-' + idx,
+                type: 'item',
+                name: name,
+                desc: name,
+                url: 'https://' + menu.bucket + '.4everland.store/' + o.Key
+              })
+            }
+          })
+        }
+      })
+    },
     menuClicked(item, key, selectedKeys) {
       this.getBreadCrumbs(item)
       if (!item.url) {

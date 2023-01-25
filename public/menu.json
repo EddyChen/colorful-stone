@@ -21,32 +21,7 @@
     "name": "Kubernetes",
     "desc": "Kubernetes",
     "icon": "CloudOutlined",
-    "sub": [
-      {
-        "key": "3-1",
-        "type": "item",
-        "name": "Kubeadm",
-        "desc": "Kubeadm",
-        "icon": "",
-        "url": "https://docs-bucket.4everland.store/install-k8s-with-kubeadm/README.md"
-      },
-      {
-        "key": "3-2",
-        "type": "item",
-        "name": "Ingress",
-        "desc": "Ingress",
-        "icon": "",
-        "url": "https://docs-bucket.4everland.store/install-k8s-with-kubeadm/README.md"
-      },
-      {
-        "key": "3-3",
-        "type": "item",
-        "name": "OpenEbs",
-        "desc": "OpenEbs",
-        "icon": "",
-        "url": "https://docs-bucket.4everland.store/install-k8s-with-kubeadm/README.md"
-      }
-    ]
+    "bucket": "k8s-bucket"
   },
   {
     "key": "4",
@@ -54,29 +29,7 @@
     "name": "Database",
     "desc": "Database",
     "icon": "DatabaseOutlined",
-    "sub": [
-      {
-        "key": "4-1",
-        "type": "item",
-        "name": "Clickhouse",
-        "desc": "Clickhouse",
-        "url": ""
-      },
-      {
-        "key": "4-2",
-        "type": "item",
-        "name": "Postgresql",
-        "desc": "Postgresql",
-        "url": ""
-      },
-      {
-        "key": "4-3",
-        "type": "item",
-        "name": "Elasticsearch",
-        "desc": "Elasticsearch",
-        "url": ""
-      }
-    ]
+    "bucket": "db-bucket"
   },
   {
     "key": "5",
