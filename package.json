@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.254.0",
     "ant-design-vue": "^3.2.15",
     "axios": "^1.2.3",
     "highlight.js": "^11.7.0",
     "marked": "^4.2.12",
     "vue": "^3.2.45",
-    "vue-jsonp": "^2.0.0",
     "vue-router": "^4.1.6",
     "vuex": "^4.1.0",
     "zero-md": "^2.4.0"

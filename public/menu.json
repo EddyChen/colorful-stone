@@ -5,7 +5,7 @@
     "name": "Intro",
     "desc": "Intro",
     "icon": "BankOutlined",
-    "url": ""
+    "url": "https://docs-bucket.4everland.store/intro/README.md"
   },
   {
     "key": "2",
@@ -13,7 +13,7 @@
     "name": "About",
     "desc": "About",
     "icon": "BookOutlined",
-    "url": ""
+    "url": "https://docs-bucket.4everland.store/about/README.md"
   },
   {
     "key": "3",
@@ -80,10 +80,10 @@
   },
   {
     "key": "5",
-    "type": "item",
+    "type": "subitem",
     "name": "Blogs",
     "desc": "Blogs",
     "icon": "CoffeeOutlined",
-    "url": ""
+    "bucket": "blog-bucket"
   }
 ]

@@ -7,8 +7,7 @@ import CrfIcon from './CrfIcon.vue'
       <crf-icon class="logo" />
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
         <template v-for="menu in menuData">
-          <a-menu-item v-if="menu.type === 'item'" v-bind:key="menu.key" 
-            @click="menuClicked(menu, menu.key)">
+          <a-menu-item v-if="menu.type === 'item'" v-bind:key="menu.key" @click="menuClicked(menu, menu.key)">
             <component :is="$icons[menu.icon]" />
             <span>{{ menu.desc }}</span>
           </a-menu-item>
@@ -19,8 +18,7 @@ import CrfIcon from './CrfIcon.vue'
                 <span>{{ menu.desc }}</span>
               </span>
             </template>
-            <a-menu-item v-for="sub in menu.sub" v-bind:key="sub.key"
-              @click="menuClicked(sub, sub.key)">
+            <a-menu-item v-for="sub in menu.sub" v-bind:key="sub.key" @click="menuClicked(sub, sub.key)">
               <component :is="$icons[sub.icon]" />
               {{ sub.desc }}
             </a-menu-item>
@@ -73,6 +71,32 @@ export default defineComponent({
     axios.get('/menu.json').then(res => {
       self.menuData = res.data
       self.getBreadCrumbs(self.menuData[0])
+      return self.menuData
+    }).then(menus => {
+      var menu = {}, sub = []
+      for (var i=0; i<menus.length; ++i) {
+        menu = menus[i]
+        if (menu.type === 'subitem' && menu.bucket) {
+          self.$s3.listObjectsV2({ Bucket: menu.bucket}, (err, data) => {
+            if (!err) {
+              var name = ''
+              data.Contents.forEach((o, idx) => {
+                if (o.Size === 0 && o.Key.endsWith('/')) {
+                  name = o.Key.substr(0, o.Key.length-1)
+                  sub.push({
+                    key: menu.key + '-' + idx,
+                    type: 'item',
+                    name: name,
+                    desc: name,
+                    url: 'https://' + menu.bucket + '.4everland.store/' + o.Key + 'README.md'
+                  })
+                }
+              })
+              menu.sub = sub
+            }
+          })
+        }
+      }
     })
   },
   methods: {
@@ -86,15 +110,15 @@ export default defineComponent({
     getBreadCrumbs(item) {
       this.breadCrumbs = []
       let menu = {}, sub = {}
-      for (var i=0; i<this.menuData.length; ++i) {
+      for (var i = 0; i < this.menuData.length; ++i) {
         menu = this.menuData[i]
-        if (menu.type === 'item' 
+        if (menu.type === 'item'
           && menu.key === item.key) {
           this.breadCrumbs.push(menu.desc)
           return
         }
         if (menu.type === 'subitem') {
-          for (var j=0; j<menu.sub.length; ++j) {
+          for (var j = 0; j < menu.sub.length; ++j) {
             sub = menu.sub[j]
             if (sub.type === 'item'
               && sub.key === item.key) {
@@ -105,12 +129,11 @@ export default defineComponent({
           }
         }
       }
-
     }
   }
 });
 </script>
-<style>
+<style scoped>
 .logo {
   text-align: center;
   height: 50px;
