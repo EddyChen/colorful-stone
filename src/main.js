@@ -5,11 +5,9 @@ import App from './App.vue'
 import * as icons from '@ant-design/icons-vue'
 import 'ant-design-vue/dist/antd.css'
 
-// import router from './router'
+import router from './router'
 // import store from './store'
 
-import { marked } from 'marked'
-import hljs from 'highlight.js'
 import { S3 } from "@aws-sdk/client-s3"
 
 const app = createApp(App)
@@ -32,6 +30,6 @@ const s3 = new S3({
 app.config.globalProperties.$s3 = s3
 
 app.use(Antd)
-  //.use(router)
+  .use(router)
   //.use(store)
   .mount('#app')

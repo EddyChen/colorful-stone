@@ -1,4 +1,6 @@
 <script setup>
+import MdEditor from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
 import CrfIcon from './CrfIcon.vue'
 </script>
 <template>
@@ -40,7 +42,12 @@ import CrfIcon from './CrfIcon.vue'
           <a-breadcrumb-item v-for="breadCrumb in breadCrumbs">{{ breadCrumb }}</a-breadcrumb-item>
         </a-breadcrumb>
         <div :style="{ padding: '24px', background: '#fff', minHeight: '700px' }">
-          <zero-md :src="contentUrl"></zero-md>
+          <md-editor v-model="mdText" 
+            :previewOnly="true"
+            :page-full-screen='true'
+            :show-code-row-number='true'
+            :markedHeadingId="markedHeadingId"
+            style="min-height: 660px;" />
         </div>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
@@ -50,9 +57,8 @@ import CrfIcon from './CrfIcon.vue'
   </a-layout>
 </template>
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import axios from 'axios'
-import { ZeroMd } from 'zero-md'
 
 export default defineComponent({
   components: {
@@ -64,7 +70,8 @@ export default defineComponent({
       selectedKeys: ['1'],
       menuData: [],
       breadCrumbs: [],
-      contentUrl: ''
+      contentUrl: '',
+      mdText: ''
     };
   },
   mounted() {
@@ -99,7 +106,8 @@ export default defineComponent({
                 type: 'item',
                 name: name,
                 desc: name,
-                url: 'https://' + menu.bucket + '.4everland.store/' + o.Key
+                url: 'https://' + menu.bucket + '.4everland.store/' + o.Key,
+                bucket: menu.bucket
               })
             }
           })
@@ -112,6 +120,33 @@ export default defineComponent({
         return
       }
       this.contentUrl = item.url
+      var self = this
+      self.mdText = ''
+      var bucket = this.getBucketFromUrl(item.url)
+      this.$s3.getObject({
+        Bucket: bucket,
+        Key: item.name + "/README.md",
+      }, (err, data) => {
+        if (!err) {
+          var reader = data.Body.getReader()
+          let charsReceived = 0
+          let result = ''
+          reader.read().then(function processText({ done, value }) {
+            // Result objects contain two properties:
+            // done  - true if the stream has already given you all its data.
+            // value - some data. Always undefined when done is true.
+            var text = new TextDecoder().decode(value);
+            self.mdText += text
+            if (done) {
+              return;
+            }
+            // value for fetch streams is a Uint8Array
+            charsReceived += value.length;
+            // Read some more, and call this function again
+            return reader.read().then(processText);
+          });
+        }
+      })
     },
     getBreadCrumbs(item) {
       this.breadCrumbs = []
@@ -135,6 +170,16 @@ export default defineComponent({
           }
         }
       }
+    },
+    getBucketFromUrl(url) {
+      var idx = url.indexOf(".4everland.store")
+      if (idx > 8) {
+        return url.substr(8, idx-8)
+      }
+      return ''
+    },
+    markedHeadingId(text, level, index) {
+      return ""
     }
   }
 });

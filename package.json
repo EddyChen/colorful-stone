@@ -12,12 +12,10 @@
     "@aws-sdk/client-s3": "^3.254.0",
     "ant-design-vue": "^3.2.15",
     "axios": "^1.2.3",
-    "highlight.js": "^11.7.0",
-    "marked": "^4.2.12",
+    "md-editor-v3": "^2.7.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
-    "vuex": "^4.1.0",
-    "zero-md": "^2.4.0"
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
