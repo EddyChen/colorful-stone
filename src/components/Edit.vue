@@ -23,6 +23,7 @@ import 'md-editor-v3/lib/style.css';
         <md-editor v-model="mdText" 
           :page-full-screen='true'
           :show-code-row-number='true'
+          :markedHeadingId="markedHeadingId"
           style="min-height: 650px;"
           @save="onSaveMdText" />
       </div>
@@ -68,6 +69,9 @@ export default defineComponent({
     },
     onSaveMdText(value, html) {
       console.log("onSave", value, html)
+    },
+    markedHeadingId(text, level, index) {
+      return "/edit"
     }
   }
 
